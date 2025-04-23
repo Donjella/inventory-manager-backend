@@ -1,9 +1,11 @@
 const express = require('express');
+const itemRoutes = require("./routes/items.js");
 
 const app = express();
 
 // Middlewares
 app.use(express.json());
+app.use('/items', itemRoutes);
 
 
 // Default route
