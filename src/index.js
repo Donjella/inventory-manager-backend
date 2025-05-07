@@ -3,9 +3,15 @@ const itemRoutes = require("./routes/items.js");
 
 const app = express();
 
+
+const cors = require("cors");
+
+app.use(cors());
+
 // Middlewares
 app.use(express.json());
 app.use('/items', itemRoutes);
+
 
 
 // Default route
